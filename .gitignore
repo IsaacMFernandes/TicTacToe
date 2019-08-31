@@ -1,0 +1,11 @@
+# Project exclude paths
+/out/
+.idea/$PRODUCT_WORKSPACE_FILE$
+.idea/.gitignore
+.idea/artifacts/
+.idea/misc.xml
+.idea/modules.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+TicTacToe.iml
+src/META-INF/
