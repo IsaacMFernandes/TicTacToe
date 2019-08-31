@@ -21,22 +21,22 @@ public class TicTacToe {
         try {
             // Print opening messages with delays for the users to read
             System.out.println();
-            System.out.println("           Welcome to Tic Tac Toe!");
+            System.out.println("             Welcome to Tic Tac Toe!");
             System.out.println();
-            System.out.println("When it's your turn, enter where you want to go");
-            System.out.println("using the format \"top-middle\", \"bottom-left\", etc.");
-            System.out.println("Player 1 is X and player 2 is O");
-            Thread.sleep(9000);
+            System.out.println(" When it's your turn, enter where you want to go");
+            System.out.println(" using the format \"top-middle\", \"bottom-left\", etc.");
+            System.out.println(" Player 1 is X and player 2 is O");
+            Thread.sleep(10000);
             System.out.println();
-            System.out.println("Starting in 3");
+            System.out.println(" Starting in 3");
             Thread.sleep(1000);
-            System.out.println("Starting in 2");
+            System.out.println(" Starting in 2");
             Thread.sleep(1000);
-            System.out.println("Starting in 1");
+            System.out.println(" Starting in 1");
             Thread.sleep(1000);
             System.out.println();
         } catch (Exception e) {
-            System.out.println("Something bad happened... oops.");
+            System.out.println(" Something bad happened... oops.");
         }
 
         int turn = 0;
@@ -48,12 +48,12 @@ public class TicTacToe {
             int c;
             // Assign a position on the 2-D Grid, unless the position given was wrong
             do {
-                System.out.print("Player " + player + ": ");
+                System.out.print(" Player " + player + ": ");
                 String position = reader.nextLine();
                 r = getPosition(position)[0];
                 c = getPosition(position)[1];
                 if (r == -1)
-                    System.out.println("Command Not Recognized!");
+                    System.out.println(" Command Not Recognized!");
             } while (r == -1);
 
             // Add the player's char
@@ -66,12 +66,12 @@ public class TicTacToe {
             if (whoWon() == 'X') {
                 System.out.println();
                 printBoard();
-                System.out.println("Congratulations, player 1, YOU WON!");
+                System.out.println(" Congratulations, player 1, YOU WON!");
                 break;
             } else if (whoWon() == 'O') {
                 System.out.println();
                 printBoard();
-                System.out.println("Congratulations, player 2, YOU WON!");
+                System.out.println(" Congratulations, player 2, YOU WON!");
                 break;
             } else {
                 System.out.println();
@@ -85,7 +85,7 @@ public class TicTacToe {
         // If tie, print board again and say it's a tie
         if (whoWon() == ' ') {
             printBoard();
-            System.out.println("The game is a tie!");
+            System.out.println(" The game is a tie!");
         }
     }
 
@@ -93,13 +93,15 @@ public class TicTacToe {
         // Go through each value in the 2-D grid and print it out
         for (int y = 0; y < row; y++) {
             for (int x = 0; x < column; x++) {
+                if (x == 0)
+                    System.out.print(" ");
                 if (x != 2)
                     System.out.print(board[y][x] + "|");
                 else
                     System.out.print(board[y][x]);
             }
             if (y != 2)
-                System.out.println("\n-----");
+                System.out.println("\n -----");
             else
                 System.out.println();
         }
