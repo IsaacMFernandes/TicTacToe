@@ -26,6 +26,7 @@ public class TicTacToe {
             System.out.println(" When it's your turn, enter where you want to go");
             System.out.println(" using the format \"top-middle\", \"bottom-left\", etc.");
             System.out.println(" Player 1 is X and player 2 is O");
+            System.out.println("\nPlease wait...\n");
             Thread.sleep(10000);
             System.out.println();
             System.out.println(" Starting in 3");
